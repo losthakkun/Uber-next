@@ -1,11 +1,25 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native'
 
-//? Create a component that will render the HomeScreen
+//? Importing libraries
+import tw from 'twrnc'
+
+//? Importing components
+import NavOptions from '../components/NavOptions'
+
+//? Create a screen that will render the HomeScreen
 const HomeScreen = () => {
 	return (
-		<SafeAreaView style={styles.container}>
-			<Text style={styles.text}>Home Screen</Text>
+		<SafeAreaView style={tw `bg-withe h-full`}>
+			<View style={tw `p-5`}>
+				<Image
+					style={styles.uberLogo}
+					source={{
+						uri: "https://links.papareact.com/gzs"
+					}}
+				/>
+				<NavOptions />
+			</View>
 		</SafeAreaView>
 	)
 }
@@ -15,14 +29,9 @@ export default HomeScreen
 
 //? Creating the stylesheet
 const styles = StyleSheet.create({
-	container: {
-    flex: 1,
-    backgroundColor: '#DCDCDC',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-	text: {
-		fontSize: 30,
-		color: '#000000',
+	uberLogo: {
+		width: 100,
+		height: 100,
+		resizeMode: 'contain',
 	},
 })

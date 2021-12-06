@@ -10,7 +10,7 @@ import NavOptions from '../components/NavOptions'
 //? Create a screen that will render the HomeScreen
 const HomeScreen = () => {
 	return (
-		<SafeAreaView style={tw `bg-withe h-full`}>
+		<SafeAreaView style={tw `bg-white h-full`}>
 			<View style={tw `p-5`}>
 				<Image
 					style={styles.uberLogo}

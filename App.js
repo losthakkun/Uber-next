@@ -10,16 +10,19 @@ import { store } from './store';
 
 //? Importing the screens
 import HomeScreen from './screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
 
 //? Creating the App component and exporting it
 export default function App() {
 	return (
-		<SafeAreaProvider>
-			<Provider store={store}>
-				<StatusBar style="auto" />
-				<HomeScreen/>
-			</Provider>
-		</SafeAreaProvider>
+		<Provider store={store}>
+			<NavigationContainer>
+				<SafeAreaProvider>
+					<StatusBar style="auto" />
+					<HomeScreen/>
+				</SafeAreaProvider>
+			</NavigationContainer>
+		</Provider>
 	);
 }
 

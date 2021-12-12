@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, Alert } from 'react-native'
 
 //? Importing libraries
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 import tw from 'twrnc'
 
 //? Importing components
 import NavOptions from '../components/NavOptions'
+
+import { GOOGLE_MAPS_APIKEY } from '@env'
 
 //? Create a screen that will render the HomeScreen
 const HomeScreen = () => {

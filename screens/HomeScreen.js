@@ -27,6 +27,7 @@ const HomeScreen = () => {
 				/>
 				<GooglePlacesAutocomplete
 					enablePoweredByContainer = {false}												//? Disable the powered by container at the bottom of the screen (default: true)
+					fetchDetails             = {true}													//? Enable fetching of details for predictions (default: false)
 					placeholder              = "A donde quieres ir?"					//? Placeholder text for the search bar (default: 'Search')
 					nearbyPlacesAPI          = "GooglePlacesSearch"						//? Which API to use: GoogleReverseGeocoding or GooglePlacesSearch (default: GooglePlacesSearch)
 					returnKeyType            = "search"												//? Specify the return key type on Android (default: "default" (or "done" on iOS))
@@ -39,6 +40,7 @@ const HomeScreen = () => {
 					}}
 					onFail  = {(error) => console.log(error)}
 					onPress = {(data, details = null) => {
+						console.log(details);
 						//? Disptch the action to set the destination
 						dispatch(
 							//? Set the origin

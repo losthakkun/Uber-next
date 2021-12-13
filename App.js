@@ -19,7 +19,9 @@ import EatScreen from './screens/EatScreen';
 
 //? Creating the App component and exporting it
 export default function App() {
+	//? Creating the stack navigator
 	const Stack = createStackNavigator();
+	//? Rendering the App component
 	return (
 		<Provider store={store}>
 			<NavigationContainer>

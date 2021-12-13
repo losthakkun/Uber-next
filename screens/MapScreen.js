@@ -7,7 +7,12 @@ import tw from 'twrnc'
 const MapScreen = () => {
 	return (
 		<SafeAreaView style={tw `bg-white h-full`}>
-			<Text>MapScreen</Text>
+			<View style={tw `h-1/2`}>
+				<Text>MapScreenA</Text>
+			</View>
+			<View style={tw `h-1/2`}>
+				<Text>MapScreenB</Text>
+			</View>
 		</SafeAreaView>
 	)
 }

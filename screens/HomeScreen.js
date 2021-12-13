@@ -40,11 +40,17 @@ const HomeScreen = () => {
 					onFail  = {(error) => console.log(error)}
 					onPress = {(data, details = null) => {
 						//? Disptch the action to set the destination
-						dispatch(setOrigin({
-							location   : details.geometry.location,
-							description: data.description
-						}))
-						dispatch(setDestination(null))
+						dispatch(
+							//? Set the origin
+							setOrigin({
+								location   : details.geometry.location,
+								description: data.description
+							})
+						)
+						dispatch(
+							//? Set the destination
+							setDestination(null)
+						)
 					}}
 					styles          = {{
 						container: {

@@ -1,11 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import { SafeAreaView } from 'react-native-safe-area-context'
+import tw from 'twrnc'
+
 const EatScreen = () => {
 	return (
-		<View>
+		<SafeAreaView style={tw `bg-white h-full`}>
 			<Text>EatScreen</Text>
-		</View>
+		</SafeAreaView>
 	)
 }
 

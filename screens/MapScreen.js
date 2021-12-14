@@ -1,19 +1,39 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import { createStackNavigator } from '@react-navigation/stack'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import tw from 'twrnc'
 
+import RideOptionsCard from '../components/RideOptionsCard'
+import NavigateCard from '../components/NavigateCard'
 import Map from '../components/Map'
 
 const MapScreen = () => {
+	const Stack = createStackNavigator();
 	return (
 		<SafeAreaView style={tw `bg-white h-full`}>
+			
 			<View style={tw `h-1/2`}>
-				<Map />
+				<Stack.Navigator>
+					<Stack.Screen
+						name = "NavigateCard"
+						component = {NavigateCard}
+						options = {{
+							headerShown: false,
+						}}
+					/>
+					<Stack.Screen
+						name = "RideOptionsCard"
+						component = {RideOptionsCard}
+						options = {{
+							headerShown: false,
+						}}
+					/>
+				</Stack.Navigator>
 			</View>
 			<View style={tw `h-1/2`}>
-				<Text>MapScreenB</Text>
+				<Map />
 			</View>
 		</SafeAreaView>
 	)

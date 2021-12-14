@@ -41,7 +41,7 @@ const HomeScreen = () => {
 					onFail  = {(error) => console.log(error)}
 					onPress = {(data, details = null) => {
 						console.log(details);
-						//? Disptch the action to set the destination
+						//? Disptch the action to set the origin
 						dispatch(
 							//? Set the origin
 							setOrigin({
@@ -57,10 +57,16 @@ const HomeScreen = () => {
 					styles          = {{
 						container: {
 							flex: 0,
+							paddingTop: 0,
 						},
 						textInput: {
-							backgroundColor: '#F5FCFF',
+							backgroundColor: '#EEEEEF',
 							fontSize       : 18,
+							borderRadius: 5,
+						},
+						textInputContainer: {
+							paddingHorizontal: 0,
+							paddingVertical: 10,
 						},
 						description: {
 							fontWeight: 'bold'

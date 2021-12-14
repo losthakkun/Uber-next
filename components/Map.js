@@ -23,6 +23,8 @@ const Map = () => {
 		>
 			{origin?.location?.lat && origin?.location?.lng && (
 				<MapView.Marker
+					title      = {'Origen'}
+					description = {origin.description}
 					coordinate = {{
 						latitude : origin.location.lat,
 						longitude: origin.location.lng,
